@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track</title>
     <!-- This is how I link up the CSS -->
-     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <!-- This is how I am adding the ability to use icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header id="track-header">Track workout</header>
     <div id="form-wrapper">
-        <form action="">
+        <!-- Added POST method so it can properly submit the form upon hitting Go! -->
+        <form action="{{ url_for('submit') }}" method="POST">
             <label for="muscle-group-select"></label>
             <label for="muscle-group-select">Select a muscle group</label>
-            <select name="muscle-groups" id="muscle-group-select" name="muscle-group-select">
+            <select id="muscle-group-select" name="muscle-group-select">
                 <option value="arms">Arms</option>
                 <option value="legs">Legs</option>
                 <option value="back">Back</option>
@@ -23,8 +24,8 @@
                 <option value="abs">Abs</option>
             </select>
             <label for="machine-select">Select a machine</label>
-            <select name="machines" id="machine-select" name="machine-select">
-                <option value="bicep-curl">Bicep curl</option>
+            <select id="machine-select" name="machine-select">
+                <option value="bicepcurl">Bicep curl</option>
                 <option value="shoulder-press">Shoulder press</option>
                 <option value="leg-press">Leg press</option>
                 <option value="glute-kickback">Glute kickback</option>
