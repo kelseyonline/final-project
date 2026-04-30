@@ -6,6 +6,10 @@
     background-color: rgb(42, 42, 42);
 }
 
+a {
+    text-decoration: none;
+}
+
 footer {
     text-align: center;
     position: fixed;
@@ -55,7 +59,122 @@ footer > a {
     background-color: inherit;
 }
 
+.index-button > a { 
+    transition: background-color 0.5s ease-in-out;
+    /* I did this so it changes color on hover too */
+    background-color: inherit;
+}
+
 /* Here I am making a 'hover state' for my buttons */
 .index-button:hover { 
     background-color:gray;
+}
+
+/* track.html */
+
+#track-header {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#form-wrapper {
+    display: flex;
+    /* border: 1px solid blue; */
+    align-items: center;
+    justify-content: center;
+}
+
+form > label {
+    font-size: 20px;
+}
+
+form { 
+    height: 70vh;
+    width: 75vh;
+    border: 1px solid white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+form > select {
+    border-radius: 50px;
+    border: 1px solid white;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 30px;
+}
+
+form > input {
+    border-radius: 50px;
+    border: 1px solid white;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 30px;
+}
+
+#numbers-wrapper {
+    /* border: 1px solid pink; */
+    display: flex;
+}
+
+#weight-wrapper { 
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-direction: column;
+}
+
+#weight-input-wrapper {
+    display: flex;
+    justify-content: left-start;
+    padding: 10px;
+    /* border: 1px solid blue; */
+}
+
+#weight-wrapper > select, input {
+    border-radius: 50px;
+    border: 1px solid white;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#weight {
+    width: 30%;
+}
+
+#measurement { 
+    border-radius: 50px;
+    border: 1px solid white;
+    height: 40px;
+    padding-left: 40px;
+    font-size: 30px;
+    font-size: 30px;
+}
+
+#reps-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 1px solid purple; */
+}
+
+#reps {
+    width: 30%;
+}
+
+#submit { 
+    background-color:rgb(252, 231, 240);
+    border: 1px solid rgb(245, 66, 141);
+    color:rgb(245, 66, 141);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
 }

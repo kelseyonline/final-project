@@ -11,33 +11,48 @@
 </head>
 <body>
     <header id="track-header">Track workout</header>
-    <label for="muscle-group-select"></label>
-    <form action="">
-        <select name="muscle-groups" id="muscle-group-select">
-            <option value="arms">Arms</option>
-            <option value="legs">Legs</option>
-            <option value="back">Back</option>
-            <option value="chest">Chest</option>
-            <option value="abs">Abs</option>
-        </select>
-        <select name="machines" id="machine-select">
-            <option value="bicep-curl">Bicep curl</option>
-            <option value="shoulder-press">Shoulder press</option>
-            <option value="leg-press">Leg press</option>
-            <option value="glute-kickback">Glute kickback</option>
-            <option value="lat-pulldown">Lat pulldown</option>
-            <option value="chest-press">Chest press</option>
-            <option value="fly">Fly</option>
-            <option value="crunch">Crunch</option>
-            <option value="torso-rotation">Torso rotation</option>
-        </select>
-        <label for="weight">Enter weight</label>
-        <input type="text" id="weight" name="weight">
-        <label for="reps">Enter reps</label>
-        <input type="text" id="reps" name="reps">
-        <input type="submit" id="submit">
-    </form>
-    
+    <div id="form-wrapper">
+        <form action="">
+            <label for="muscle-group-select"></label>
+            <label for="muscle-group-select">Select a muscle group</label>
+            <select name="muscle-groups" id="muscle-group-select" name="muscle-group-select">
+                <option value="arms">Arms</option>
+                <option value="legs">Legs</option>
+                <option value="back">Back</option>
+                <option value="chest">Chest</option>
+                <option value="abs">Abs</option>
+            </select>
+            <label for="machine-select">Select a machine</label>
+            <select name="machines" id="machine-select" name="machine-select">
+                <option value="bicep-curl">Bicep curl</option>
+                <option value="shoulder-press">Shoulder press</option>
+                <option value="leg-press">Leg press</option>
+                <option value="glute-kickback">Glute kickback</option>
+                <option value="lat-pulldown">Lat pulldown</option>
+                <option value="chest-press">Chest press</option>
+                <option value="fly">Fly</option>
+                <option value="crunch">Crunch</option>
+                <option value="torso-rotation">Torso rotation</option>
+            </select>
+            <div id="numbers-wrapper">
+                <div id="weight-wrapper">
+                    <label for="weight">Enter weight</label>
+                    <div id="weight-input-wrapper">
+                        <input type="text" id="weight" name="weight">
+                        <select name="measurement" id="measurement">
+                            <option value="lbs">lbs</option>
+                            <option value="kg">kg</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="reps-wrapper">
+                    <label for="reps">Enter reps</label>
+                    <input type="text" id="reps" name="reps">
+                </div>
+            </div>
+            <input type="submit" id="submit" value="Go!">
+        </form>
+    </div>
     <footer>Made by <a href="https://github.com/kelseyonline">@kelseyonline</a> on Github</footer>
 </body>
 </html>
