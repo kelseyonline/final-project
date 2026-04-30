@@ -2,4 +2,60 @@
 
 * {
     font-family: 'ABeeZee', sans-serif;
+    color: white;
+    background-color: rgb(42, 42, 42);
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px
+}
+
+footer > a { 
+    color: rgb(245, 66, 141);
+}
+
+#prompt { 
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#index-buttons { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    /* border: 1px red solid; */
+    height: 65vh;
+}
+
+.index-button { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px white solid;
+    border-radius: 50px;
+    padding: 50px;
+    width: 40%;
+    font-size: 35px;
+    gap: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.index-button > i { 
+    font-size: 60px;
+    transition: background-color 0.5s ease-in-out;
+    /* I did this so it changes color on hover too */
+    background-color: inherit;
+}
+
+/* Here I am making a 'hover state' for my buttons */
+.index-button:hover { 
+    background-color:gray;
 }
