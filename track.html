@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track</title>
+    <!-- This is how I link up the CSS -->
+     <link rel="stylesheet" href="styles.css">
+    <!-- This is how I am adding the ability to use icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="track-header">Track workout</header>
+    <label for="muscle-group-select"></label>
+    <form action="">
+        <select name="muscle-groups" id="muscle-group-select">
+            <option value="arms">Arms</option>
+            <option value="legs">Legs</option>
+            <option value="back">Back</option>
+            <option value="chest">Chest</option>
+            <option value="abs">Abs</option>
+        </select>
+        <select name="machines" id="machine-select">
+            <option value="bicep-curl">Bicep curl</option>
+            <option value="shoulder-press">Shoulder press</option>
+            <option value="leg-press">Leg press</option>
+            <option value="glute-kickback">Glute kickback</option>
+            <option value="lat-pulldown">Lat pulldown</option>
+            <option value="chest-press">Chest press</option>
+            <option value="fly">Fly</option>
+            <option value="crunch">Crunch</option>
+            <option value="torso-rotation">Torso rotation</option>
+        </select>
+        <label for="weight">Enter weight</label>
+        <input type="text" id="weight" name="weight">
+        <label for="reps">Enter reps</label>
+        <input type="text" id="reps" name="reps">
+        <input type="submit" id="submit">
+    </form>
+    
+    <footer>Made by <a href="https://github.com/kelseyonline">@kelseyonline</a> on Github</footer>
+</body>
+</html>
