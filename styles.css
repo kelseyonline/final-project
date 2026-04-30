@@ -178,3 +178,15 @@ form > input {
     align-self: center;
     align-items: center;
 }
+
+/* history.html */
+#history-header {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#table-wrapper {
+    /* I will need to add this later */
+}
