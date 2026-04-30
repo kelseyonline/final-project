@@ -5,6 +5,7 @@
 [] Remove hyphen from machine names in history.html
 [] Add animations
 [] Add input warnings
+[] Add "add another workout?" button upon form submission instead of going directly to history
 
 ### Font
 OFL-1.1
