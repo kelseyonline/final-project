@@ -4,6 +4,7 @@
 [] Create login and sessions 
 [] Remove hyphen from machine names in history.html
 [] Add animations
+[] Add input warnings
 
 ### Font
 OFL-1.1

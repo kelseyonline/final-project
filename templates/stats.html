@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <!-- This is how I link up the CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- This is how I am adding the ability to use icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="track-header">Your stats</header>
+    <div id="stats-wrapper">
+        <p id="heaviest-label">Your heaviest lift: </p>
+        <p id="heaviest">#</p>
+        <p id="favorite-machine-label">Your favorite machine: </p>
+        <p id="favorite-machine">XYZ</p>
+        <p id="best-day-label">Your best day: </p>
+        <p id="best-day">mm/dd/yyyy</p>
+    </div>
+    <footer>Made by <a href="https://github.com/kelseyonline">@kelseyonline</a> on Github</footer>
+</body>
+</html>
