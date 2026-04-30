@@ -12,6 +12,10 @@ app = Flask(__name__)
 CSV_FILE = "data.csv"
 
 @app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/track")
 def form():
     return render_template("track.html")
 
@@ -37,6 +41,10 @@ def history():
         data = list(reader)
 
     return render_template("history.html", data=data)
+
+@app.route('/stats', methods=["GET"])
+def stats():
+    return render_template('stats.html')
 
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
