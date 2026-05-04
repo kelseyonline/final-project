@@ -45,10 +45,14 @@ def history():
 @app.route('/stats', methods=["GET"])
 def stats():
     max_weight = 0
+    # This one is a dictionary because it is machine + number
+    machine_counts = {}
+    date_counts = {}
 
     with open(CSV_FILE, "r") as file:
         reader = csv.reader(file)
         for row in reader:
+            # This part deals with max weight
             if len(row) > 3:  # making sure weight column exists
                 try:
                     weight = float(row[3])  # convert string to a number
@@ -56,7 +60,30 @@ def stats():
                         max_weight = weight
                 except ValueError:
                     continue  # skip bad data (like empty strings)
-    return render_template('stats.html', max_weight=max_weight)
+            
+            # This part deals with the most common machine
+            if len(row) > 2:
+                machine = row[2].strip()
+
+                if machine in machine_counts:
+                    machine_counts[machine] += 1
+                else:
+                    machine_counts[machine] = 1
+
+            # This part calculates the most common day 
+            if len(row) > 0 and row[0].strip():
+                day = row[0].strip()
+                date_counts[day] = date_counts.get(day, 0) + 1
+
+    most_used_machine = None
+    if machine_counts: 
+        most_used_machine = max(machine_counts, key=machine_counts.get)
+
+    most_common_day = None
+    if date_counts: 
+        most_common_day = max(date_counts, key=date_counts.get)
+        
+    return render_template('stats.html', max_weight=max_weight, most_used_machine=most_used_machine, most_common_day=most_common_day)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
