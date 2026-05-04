@@ -44,7 +44,19 @@ def history():
 
 @app.route('/stats', methods=["GET"])
 def stats():
-    return render_template('stats.html')
+    max_weight = 0
+
+    with open(CSV_FILE, "r") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if len(row) > 3:  # making sure weight column exists
+                try:
+                    weight = float(row[3])  # convert string to a number
+                    if weight > max_weight:
+                        max_weight = weight
+                except ValueError:
+                    continue  # skip bad data (like empty strings)
+    return render_template('stats.html', max_weight=max_weight)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
